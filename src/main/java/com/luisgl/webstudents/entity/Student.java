@@ -27,7 +27,15 @@ public class Student {
     public Student(){}
 
     public Student(Long id, String name, String lastname, String email) {
+        super();
         this.id = id;
+        this.name = name;
+        this.lastname = lastname;
+        this.email = email;
+    }
+    
+    public Student(String name, String lastname, String email) {
+        super();
         this.name = name;
         this.lastname = lastname;
         this.email = email;

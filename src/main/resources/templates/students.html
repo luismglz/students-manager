@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Students - Manager</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row ">
+                <h1>Students List</h1>
+            </div>
+            <table class="table highlight mt-2">
+                <thead class="table-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="student: ${students}">
+                        <td th:text="${student.name}">Name</td>
+                        <td th:text="${student.lastname}">Lastname</td>
+                        <td th:text="${student.email}">Email</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>
