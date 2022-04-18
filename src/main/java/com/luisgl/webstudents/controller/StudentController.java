@@ -39,9 +39,9 @@ public class StudentController {
     @GetMapping("/students/update/{id}")
     public String routerUpdateStudent(@PathVariable Long id, Model model) {
         model.addAttribute("student", service.getStudentById(id));
-        return "update-student.html";
+        return "update-student";
     }
-
+ 
     @PostMapping("/students/{id}")
     public String updateStudent(@PathVariable Long id, @ModelAttribute("student") Student selectedStudent, Model model) {
 

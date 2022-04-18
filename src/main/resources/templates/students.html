@@ -20,7 +20,7 @@
                                 <a class="nav-link active" aria-current="page" th:href="@{/students}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
+                                <a class="nav-link" th:href="@{/students/new}">Register Student</a>
                             </li>
                         </ul>
                     </div>
@@ -37,6 +37,7 @@
                         <th>Name</th>
                         <th>Lastname</th>
                         <th>Email</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +45,10 @@
                         <td th:text="${student.name}">Name</td>
                         <td th:text="${student.lastname}">Lastname</td>
                         <td th:text="${student.email}">Email</td>
+                        <td>
+                            <a th:href="@{/students/update/{id}(id=${student.id})}" class="btn btn-warning">Edit</a>
+                            <a th:href="@{/students/{id}(id=${student.id})}" class="btn btn-danger">Delete</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
